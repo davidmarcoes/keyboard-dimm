@@ -1,0 +1,12 @@
+[Unit]
+Description=Auto toggle keyboard backlight
+Documentation=https://github.com/davidmarcoes/keyboard-dimm
+After=dbus.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/keyboard-dimm
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
