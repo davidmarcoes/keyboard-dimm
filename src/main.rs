@@ -35,7 +35,7 @@ impl LibinputInterface for Interface {
 }
 
 fn read_brightness() -> char {
-    return read_to_string(BRIGHTNESS_HW_CHANGED_FILE).unwrap().chars().nth(0).unwrap();
+    return read_to_string(BRIGHTNESS_HW_CHANGED_FILE).unwrap_or("0".to_string()).chars().nth(0).unwrap();
 }
 
 fn save_brightness(brightness_mode: char) {
